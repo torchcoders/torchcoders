@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { SplashScreen } from "@/components/splash-screen";
 
 export default function RootLayout({
   children,
@@ -41,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="scroll-smooth">
       <body className={inter.className}>
+        <SplashScreen />
         <SiteHeader />
         {children}
         <SiteFooter />

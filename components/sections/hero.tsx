@@ -23,14 +23,21 @@ export function HeroSection() {
       <div className="container relative z-10 w-full">
         <div className="flex flex-col max-w-2xl py-12 md:py-24">
           
-          <div className="flex items-center gap-4 mb-6">
-            <Image
-              src="/logo.svg"
-              alt="TorchCoders Logo"
-              width={64}
-              height={64}
-              className="drop-shadow-lg"
-            />
+          <div className="flex items-center gap-4 mb-6 group cursor-pointer">
+            <div className="relative w-16 h-16">
+              <Image
+                src="/logo.svg"
+                alt="TorchCoders Logo"
+                fill
+                className="drop-shadow-lg transition-opacity duration-300 group-hover:opacity-0"
+              />
+              <Image
+                src="/icon-animated.svg"
+                alt="TorchCoders Animated Logo"
+                fill
+                className="drop-shadow-lg absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              />
+            </div>
             <p className="hero-eyebrow m-0 text-primary uppercase tracking-widest font-semibold">
               TorchCoders
             </p>
